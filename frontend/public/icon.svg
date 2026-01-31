@@ -1,0 +1,42 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @media (prefers-color-scheme: light) {
+      .background { fill: #1e293b; }
+      .moon { fill: #fbbf24; }
+      .stars { fill: #ffffff; }
+    }
+    @media (prefers-color-scheme: dark) {
+      .background { fill: #0f172a; }
+      .moon { fill: #f59e0b; }
+      .stars { fill: #f1f5f9; }
+    }
+  </style>
+  <rect class="background" width="180" height="180" rx="37" />
+  
+  <!-- Full Moon -->
+  <circle class="moon" cx="90" cy="90" r="35"/>
+  
+  <!-- Moon craters for texture -->
+  <circle class="background" cx="80" cy="85" r="4"/>
+  <circle class="background" cx="95" cy="90" r="3"/>
+  <circle class="background" cx="88" cy="100" r="2.5"/>
+  <circle class="background" cx="105" cy="95" r="2"/>
+  
+  <!-- Stars -->
+  <g class="stars">
+    <!-- Large star -->
+    <path d="M45 40L47 46L53 46L48 50L50 56L45 52L40 56L42 50L37 46L43 46Z"/>
+    <!-- Medium stars -->
+    <path d="M135 35L136 38L139 38L136.5 40L137.5 43L135 41L132.5 43L133.5 40L131 38L134 38Z"/>
+    <path d="M145 70L146 73L149 73L146.5 75L147.5 78L145 76L142.5 78L143.5 75L141 73L144 73Z"/>
+    <path d="M35 110L36 113L39 113L36.5 115L37.5 118L35 116L32.5 118L33.5 115L31 113L34 113Z"/>
+    <!-- Small stars -->
+    <circle cx="55" cy="65" r="2"/>
+    <circle cx="125" cy="55" r="2"/>
+    <circle cx="140" cy="100" r="1.5"/>
+    <circle cx="30" cy="80" r="1.5"/>
+    <circle cx="150" cy="120" r="2"/>
+    <circle cx="40" cy="140" r="1.5"/>
+    <circle cx="130" cy="135" r="2"/>
+  </g>
+</svg>

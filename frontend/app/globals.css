@@ -1,0 +1,228 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Light Mode - Blue Gradient Scale */
+  --blue-50: oklch(0.98 0.01 250);
+  --blue-100: oklch(0.95 0.02 250);
+  --blue-200: oklch(0.88 0.05 250);
+  --blue-300: oklch(0.8 0.08 250);
+  --blue-400: oklch(0.65 0.12 250);
+  --blue-500: oklch(0.55 0.15 250);
+  --blue-600: oklch(0.45 0.14 250);
+  --blue-700: oklch(0.35 0.12 250);
+  --blue-800: oklch(0.25 0.08 250);
+  --blue-900: oklch(0.15 0.05 250);
+
+  /* Light Mode - Palette (CHANGED: Removed orange accents, using only blue shades) */
+  --background: oklch(0.99 0 0);
+  --foreground: oklch(0.12 0 0);
+  --card: var(--blue-50);
+  --card-foreground: var(--blue-900);
+  --popover: var(--blue-50);
+  --popover-foreground: var(--blue-900);
+  --primary: var(--blue-700);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: var(--blue-600);
+  --secondary-foreground: oklch(1 0 0);
+  --muted: var(--blue-200);
+  --muted-foreground: var(--blue-700);
+  --accent: var(--blue-500);
+  --accent-foreground: oklch(1 0 0);
+  --accent-light: var(--blue-300);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(1 0 0);
+  --warning: oklch(0.6 0.15 60);
+  --error: oklch(0.55 0.2 20);
+  --success: oklch(0.6 0.15 140);
+  --border: var(--blue-200);
+  --input: var(--blue-100);
+  --ring: var(--blue-700);
+  --chart-1: var(--blue-700);
+  --chart-2: var(--blue-600);
+  --chart-3: var(--blue-500);
+  --chart-4: var(--blue-400);
+  --chart-5: var(--blue-300);
+  --radius: 0.875rem;
+  --sidebar: var(--blue-50);
+  --sidebar-foreground: var(--blue-900);
+  --sidebar-primary: var(--blue-700);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: var(--blue-100);
+  --sidebar-accent-foreground: var(--blue-700);
+  --sidebar-border: var(--blue-200);
+  --sidebar-ring: var(--blue-700);
+}
+
+.dark {
+  /* Dark Mode - Dark Blue Gradient Scale */
+  --blue-50: oklch(0.95 0.02 250);
+  --blue-100: oklch(0.9 0.03 250);
+  --blue-200: oklch(0.8 0.05 250);
+  --blue-300: oklch(0.7 0.08 250);
+  --blue-400: oklch(0.6 0.12 250);
+  --blue-500: oklch(0.5 0.15 250);
+  --blue-600: oklch(0.4 0.14 250);
+  --blue-700: oklch(0.3 0.12 250);
+  --blue-800: oklch(0.18 0.08 250);
+  --blue-900: oklch(0.08 0.05 250);
+
+  /* Dark Mode - Palette (CHANGED: Pure blue dark theme without orange) */
+  --background: var(--blue-900);
+  --foreground: oklch(0.95 0.01 250);
+  --card: var(--blue-800);
+  --card-foreground: oklch(0.95 0.01 250);
+  --popover: var(--blue-800);
+  --popover-foreground: oklch(0.95 0.01 250);
+  --primary: var(--blue-500);
+  --primary-foreground: var(--blue-900);
+  --secondary: var(--blue-400);
+  --secondary-foreground: var(--blue-900);
+  --muted: var(--blue-700);
+  --muted-foreground: var(--blue-300);
+  --accent: var(--blue-300);
+  --accent-foreground: var(--blue-900);
+  --accent-light: var(--blue-200);
+  --destructive: oklch(0.65 0.2 20);
+  --destructive-foreground: oklch(0.95 0.01 250);
+  --warning: oklch(0.7 0.19 60);
+  --error: oklch(0.65 0.2 20);
+  --success: oklch(0.65 0.15 140);
+  --border: var(--blue-700);
+  --input: var(--blue-800);
+  --ring: var(--blue-500);
+  --chart-1: var(--blue-500);
+  --chart-2: var(--blue-400);
+  --chart-3: var(--blue-300);
+  --chart-4: var(--blue-200);
+  --chart-5: var(--blue-100);
+  --sidebar: var(--blue-800);
+  --sidebar-foreground: oklch(0.95 0.01 250);
+  --sidebar-primary: var(--blue-500);
+  --sidebar-primary-foreground: var(--blue-900);
+  --sidebar-accent: var(--blue-700);
+  --sidebar-accent-foreground: oklch(0.95 0.01 250);
+  --sidebar-border: var(--blue-700);
+  --sidebar-ring: var(--blue-500);
+}
+
+@theme inline {
+  --font-sans: "Geist", "Geist Fallback";
+  --font-mono: "Geist Mono", "Geist Mono Fallback";
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-light: var(--accent-light);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-warning: var(--warning);
+  --color-error: var(--error);
+  --color-success: var(--success);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground transition-colors duration-500;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Enhanced dynamic cards with blue gradient variations */
+  .card-premium {
+    @apply bg-card text-card-foreground rounded-xl border border-border/50 p-6 shadow-lg hover:shadow-2xl hover:border-primary/50 transition-all duration-300 backdrop-blur-sm hover:scale-105;
+  }
+
+  .card-elevated {
+    @apply bg-gradient-to-br from-card to-card/70 border-2 border-primary/20 rounded-xl p-6 shadow-xl hover:shadow-2xl hover:border-primary/40 transition-all duration-300;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary to-secondary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:shadow-lg hover:scale-105 transition-all duration-200 disabled:opacity-50 disabled:scale-100 active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary/80 text-secondary-foreground px-6 py-3 rounded-lg font-medium hover:bg-secondary hover:shadow-md transition-all duration-200 disabled:opacity-50 border border-secondary/50;
+  }
+
+  /* Dynamic input with blue theme */
+  .input-premium {
+    @apply w-full px-4 py-3 bg-input text-foreground border-2 border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all duration-200 placeholder:text-muted-foreground dark:bg-card/30;
+  }
+
+  .badge-accent {
+    @apply inline-flex items-center px-4 py-2 rounded-full bg-accent/20 text-accent font-semibold text-sm border border-accent/40 animate-pulse hover:bg-accent/30 transition-all duration-200;
+  }
+
+  .stat-card {
+    @apply flex flex-col gap-3 p-5 rounded-lg bg-gradient-to-br from-primary/10 to-secondary/5 border border-primary/20 hover:border-primary/50 hover:bg-gradient-to-br hover:from-primary/15 hover:to-secondary/10 transition-all duration-300;
+  }
+
+  /* Enhanced animations for dynamic feel */
+  .pulse-soft {
+    @apply animate-pulse;
+  }
+
+  .glow-primary {
+    @apply shadow-lg shadow-primary/40 dark:shadow-primary/25;
+  }
+
+  .slide-in {
+    @apply animate-in slide-in-from-left-4 duration-500;
+  }
+
+  .fade-in {
+    @apply animate-in fade-in duration-300;
+  }
+
+  .scale-in {
+    @apply animate-in zoom-in-50 duration-400;
+  }
+
+  /* Smooth gradient backgrounds with pure blue */
+  .gradient-mesh {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);
+  }
+
+  .gradient-mesh-dark {
+    @apply dark:bg-gradient-to-br dark:from-blue-800 dark:via-blue-900 dark:to-blue-900;
+  }
+}
